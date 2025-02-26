@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2025 at 04:20 PM
+-- Generation Time: Feb 26, 2025 at 03:40 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,6 +35,13 @@ CREATE TABLE `doctores` (
   `Horario` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `doctores`
+--
+
+INSERT INTO `doctores` (`IDdoctores`, `Nombres`, `Apellido`, `Consultorio`, `Horario`) VALUES
+(1345672, 'Juan', 'Flores', 'consultorio 3', '11:00 A.M');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +53,13 @@ CREATE TABLE `especialidades` (
   `nombre` varchar(30) NOT NULL,
   `especialidad` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `especialidades`
+--
+
+INSERT INTO `especialidades` (`IDdoctor`, `nombre`, `especialidad`) VALUES
+(1345672, 'Hernesto', 'Alergología');
 
 -- --------------------------------------------------------
 
@@ -60,6 +74,13 @@ CREATE TABLE `inventario` (
   `equipo_medico` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `inventario`
+--
+
+INSERT INTO `inventario` (`IDproducto`, `comida`, `herramientas`, `equipo_medico`) VALUES
+(1345672, 'Comida altas en prot', 'bisturi', 'ultrasonido de diagnóstico');
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +93,13 @@ CREATE TABLE `pacientes` (
   `Cuarto` varchar(20) NOT NULL,
   `Contacto` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `pacientes`
+--
+
+INSERT INTO `pacientes` (`IDpaciente`, `Nombre`, `Cuarto`, `Contacto`) VALUES
+(1345672, 'Hernesto', 'Cuarto 603', 215171623);
 
 --
 -- Indexes for dumped tables
@@ -134,6 +162,7 @@ ALTER TABLE `inventario`
 ALTER TABLE `pacientes`
   ADD CONSTRAINT `pacientes_ibfk_1` FOREIGN KEY (`IDpaciente`) REFERENCES `inventario` (`IDproducto`),
   ADD CONSTRAINT `pacientes_ibfk_2` FOREIGN KEY (`Nombre`) REFERENCES `especialidades` (`nombre`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
