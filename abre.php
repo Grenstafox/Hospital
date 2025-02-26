@@ -6,7 +6,7 @@ $password = ""; // Contraseña (vacía para XAMPP por defecto)
 $dbname = "hospital"; // Nombre de la base de datos (asegúrate de que sea el nombre correcto)
 
 // Crear la conexión
-$conexion = new mysqli($servername, $username, $password, $dbname);
+$conexion = new mysqli($servername, $Grenstafox, $17JMal@#, $dbname);
 
 // Verificar si la conexión fue exitosa
 if ($conexion->connect_error) {
