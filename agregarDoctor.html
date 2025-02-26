@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Agregar Doctor</title>
+</head>
+<body>
+    <h1>Agregar Doctor</h1>
+    <form action="guardarDoctor.php" method="POST">
+        <label for="nombre">Nombre del Doctor</label>
+        <input type="text" id="nombre" name="nombre" maxlength="50" required><br><br>
+
+        <label for="especialidad">Especialidad</label>
+        <input type="text" id="especialidad" name="especialidad" maxlength="50" required><br><br>
+
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" maxlength="15" required><br><br>
+        
+        <button type="submit">Guardar Doctor</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Agregar Tratamiento</title>
+</head>
+<body>
+    <h1>Agregar Tratamiento</h1>
+    <form action="guardarTratamiento.php" method="POST">
+        <label for="descripcion">Descripción del Tratamiento</label>
+        <textarea id="descripcion" name="descripcion" maxlength="255" required></textarea><br><br>
+
+        <label for="fecha_inicio">Fecha de Inicio</label>
+        <input type="date" id="fecha_inicio" name="fecha_inicio" required><br><br>
+
+        <label for="fecha_fin">Fecha de Fin</label>
+        <input type="date" id="fecha_fin" name="fecha_fin"><br><br>
+
+        <label for="paciente_id">Paciente</label>
+        <input type="number" id="paciente_id" name="paciente_id" required><br><br>
+
+        <label for="doctor_id">Doctor</label>
+        <input type="number" id="doctor_id" name="doctor_id" required><br><br>
+
+        <label for="producto_id">Producto (de Inventario)</label>
+        <input type="number" id="producto_id" name="producto_id"><br><br>
+
+        <button type="submit">Guardar Tratamiento</button>
+    </form>
+</body>
+</html>
